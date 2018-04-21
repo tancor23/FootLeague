@@ -22,9 +22,9 @@ import by.rebel.footleague.domain.User;
 public class UserDaoImpl implements UserDao {
 
 	private static final Logger logger = LogManager.getLogger();
-	private final String SQL_READALL_DO_SELECT_ALL_FROM_USERS = "SELECT user_id, name, login, password, email, role, FROM users;";
 	private final String SQL_CREATE_DO_INSERT_INTO_FROM_USERS = "INSERT INTO users (login, password) VALUE (?,?);";
-	private final String SQL_READ_DO_SELECT_NEEDS_FROM_USERS = "SELECT user_id, name, login, password, email, role, FROM users WHERE user_id=?";
+	private final String SQL_READ_DO_SELECT_NEEDS_FROM_USERS = "SELECT user_id, name, login, password, email, role FROM users WHERE user_id=?";
+	private final String SQL_READALL_DO_SELECT_ALL_FROM_USERS = "SELECT user_id, name, login, password, email, role FROM users;";
 	private final String SQL_UPDATE_DO_UPDATE_NEEDS_FROM_USERS = "UPDATE users SET login=?, password=? WHERE user_id=?;";
 	private final String SQL_DELETE_DO_DELETE_ID_FROM_USERS = "DELETE FROM users WHERE user_id=?;";
 
