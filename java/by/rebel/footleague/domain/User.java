@@ -22,6 +22,17 @@ public class User extends Entity implements Serializable {
 	public User(int id) {
 		super(id);
 	}
+	
+	public User(String login, String password) {
+		this.login = login;
+		this.password = password;
+	}
+	
+	public User(int id, String login, String password) {
+		super(id);
+		this.login = login;
+		this.password = password;
+	}
 
 	public User(String login, String password, int role) {
 		super();

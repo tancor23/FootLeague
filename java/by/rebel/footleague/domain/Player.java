@@ -25,6 +25,17 @@ public class Player extends Entity implements Serializable {
 	public Player(int id) {
 		super(id);
 	}
+	
+	public Player(String firstName, String secondName) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+	}
+	
+	public Player(int id, String firstName, String secondName) {
+		super(id);
+		this.firstName = firstName;
+		this.secondName = secondName;
+	}
 
 	public Player(int id, String firstName, String secondName, int countOfGames, int countOfGoals,
 			int countOfYellowCards, int countOfRedCards) {
@@ -39,7 +50,6 @@ public class Player extends Entity implements Serializable {
 
 	public Player(String firstName, String secondName, int countOfGames, int countOfGoals, int countOfYellowCards,
 			int countOfRedCards) {
-		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.countOfGames = countOfGames;
