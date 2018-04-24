@@ -48,7 +48,19 @@ public class MatchDaoImpl implements MatchDao {
 
 	@Override
 	public Match read(int matchId) {
-		return null;
+		try (Connection connection = DBConnectionHelper.connect();
+			PreparedStatement ps = connection.prepareStatement(SQL_READ_DO_SELECT_NEEDS_FROM_MATCHES)) {
+		ps.setInt(1, matchId);
+		ResultSet result = ps.executeQuery();
+		if (result.next()) {
+			Match match = new Match(matchId);
+			setMatchFields(match, result);
+			return match;
+		}
+	} catch (SQLException e) {
+		logger.error("Error is in MatchDaoImpl.read(); ", e);
+	}
+	return null;		
 	}
 
 	@Override
@@ -64,4 +76,19 @@ public class MatchDaoImpl implements MatchDao {
 	public void delete(int matchId) {
 	}
 
+	private void setMatchFields(Match match, ResultSet result) throws SQLException {
+		match.setNameTheFirstTeam(result.getString("home_team"));
+		match.setNameTheSecondTeam(result.getString("home_team"));
+		match.setCountOfGoalsTheFirstTeam(result.getInt("count_goals_home_team"));
+		match.setCountOfGoalsTheSecondTeam(result.getInt("count_goals_guest_team"));
+		match.setPointsHomeTeam(result.getInt("points_home_team"));
+		match.setPointsGuestTeam(result.getInt("points_guest_team"));
+	}
+
+	private void prepareMatchFields(PreparedStatement ps, Match match) throws SQLException {
+		ps.setString(1, match.getNameTheFirstTeam());
+		ps.setString(2, match.getNameTheSecondTeam());
+		ps.setInt(3, match.getId());
+	}
+	
 }
