@@ -15,8 +15,6 @@ public class WebConstantDeclaration {
 	public static final String PAGE_USER_EDIT = "/WEB-INF/page/user/editcars.jsp";
 	public static final String PAGE_USER_LIST = "/WEB-INF/page/user/main.jsp";
 
-	private WebConstantDeclaration() {
-
-	}
+	private WebConstantDeclaration() {}
 
 }

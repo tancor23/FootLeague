@@ -6,8 +6,7 @@ package by.rebel.footleague.web.util;
  */
 public class HttpRequestParamValidator {
 
-	private HttpRequestParamValidator() {
-	}
+	private HttpRequestParamValidator() {}
 
 	public static void validateRequestParamNotNull(String ... str) {
 		for (String s: str) {
