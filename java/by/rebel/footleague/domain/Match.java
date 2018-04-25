@@ -15,6 +15,7 @@ import java.io.Serializable;
 public class Match extends Entity implements Serializable {
 
 	private static final long serialVersionUID = 3279318837356131888L;
+	
 	private String nameHomeTeam;
 	private String nameGuestTeam;
 	private int countOfGoalsHomeTeam;
