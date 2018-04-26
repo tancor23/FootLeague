@@ -90,6 +90,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate-core.version}</version>
 		</dependency>
+		
 
 	</dependencies>
 
