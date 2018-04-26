@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * @author Vydra_Sergei
- * Class User is with private fields: id, name, login, password, email, role.
+ * Class User is with private fields: id, name, login, password, email.
  * Getters/setters and constructors were implemented.
  */
 public class User extends Entity implements Serializable {
@@ -14,7 +14,7 @@ public class User extends Entity implements Serializable {
 	private String login;
 	private String password;
 	private String email;
-	private int role;
+
 
 	public User() {
 	}
@@ -34,36 +34,22 @@ public class User extends Entity implements Serializable {
 		this.password = password;
 	}
 
-	public User(String login, String password, int role) {
-		super();
-		this.login = login;
-		this.password = password;
-		this.role = role;
-	}
-
-	public User(String name, String login, String password, String email, int role) {
+	public User(String name, String login, String password, String email) {
 		super();
 		this.name = name;
 		this.login = login;
 		this.password = password;
 		this.email = email;
-		this.role = role;
+	
 	}
 
-	public User(int id, String login, String password, int role) {
-		super(id);
-		this.login = login;
-		this.password = password;
-		this.role = role;
-	}
-
-	public User(int id, String name, String login, String password, String email, int role) {
+	public User(int id, String name, String login, String password, String email) {
 		super(id);
 		this.name = name;
 		this.login = login;
 		this.password = password;
 		this.email = email;
-		this.role = role;
+		
 	}
 
 	public String getName() {
@@ -98,14 +84,6 @@ public class User extends Entity implements Serializable {
 		this.email = email;
 	}
 
-	public int getRole() {
-		return role;
-	}
-
-	public void setRole(int role) {
-		this.role = role;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -115,7 +93,6 @@ public class User extends Entity implements Serializable {
 		result = prime * result + ((login == null) ? 0 : login.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + role;
 		return result;
 	}
 
@@ -148,15 +125,13 @@ public class User extends Entity implements Serializable {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (role != other.role)
-			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
 		return "name:" + name + ";  " + "login:" + login + ";  " + "password:" + password + ";  " + "email:" + email
-				+ ";  " + "role:" + role + ";  ";
+				+ ";  ";
 	}
 
 }
