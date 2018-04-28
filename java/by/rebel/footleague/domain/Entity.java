@@ -6,7 +6,7 @@ public abstract class Entity implements Serializable {
 
 	/**
 	 * @author Vydra_Sergei
-	 * It is the abstract class with id-number and
+	 * It is the abstract class with private id-number;
 	 */
 	private static final long serialVersionUID = 9025038836818949350L;
 	private int id;

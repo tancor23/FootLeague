@@ -5,6 +5,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
+/**
+ * @author Vydra_Sergei
+ * Final class SessionFactoryManager connects configuration (.xml) from resources ;
+ */
 public final class SessionFactoryManager {
 
 	private static SessionFactory sessionFactory;
