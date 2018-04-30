@@ -23,8 +23,11 @@
 		<property name="hibernate.connection.password">
 			root
 		</property>
-
-		<mapping resource="hbm/car.hbm.xml" />
+		
+		<property name="hibernate.enable_lazy_load_no_trans">true</property>
+		
+		<mapping resource="hbm/user.hbm.xml" />
+		<mapping resource="hbm/role.hbm.xml" />
 
 	</session-factory>
 

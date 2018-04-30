@@ -1,0 +1,22 @@
+<?xml version ="1.0" encoding = "UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="by.rebel.footleague.domain.User" table="users">
+	
+		<id name="id" type="int">
+			<column name="user_id" />
+			<generator class="increment" />
+		</id>
+
+		<property name="login" type="java.lang.String">
+			<column name="login" />
+		</property>
+
+		<property name="password" type="java.lang.String">
+			<column name="password" />
+		</property>
+
+	</class>
+</hibernate-mapping>
