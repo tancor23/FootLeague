@@ -21,7 +21,6 @@
 		</plugins>
 	</build>
 
-
 	<properties>
 		<servlet-api.version>4.0.0</servlet-api.version>
 		<mysql-connector.version>6.0.6</mysql-connector.version>
@@ -32,15 +31,22 @@
 		<spring-framework.version>4.3.16.RELEASE</spring-framework.version>
 		<spring-web.version>4.3.16.RELEASE</spring-web.version>
 		<hibernate-core.version>4.3.11.Final</hibernate-core.version>
+		<junit.version>4.12</junit.version>
 
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet-api.version}</version>
-
 		</dependency>
 
 		<dependency>
@@ -50,8 +56,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
 			<version>${jstl.version}</version>
 		</dependency>
 
@@ -90,9 +96,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate-core.version}</version>
 		</dependency>
-		
+
 
 	</dependencies>
-
-
 </project>
