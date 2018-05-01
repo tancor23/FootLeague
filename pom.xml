@@ -32,10 +32,17 @@
 		<spring-web.version>4.3.16.RELEASE</spring-web.version>
 		<hibernate-core.version>4.3.11.Final</hibernate-core.version>
 		<junit.version>4.12</junit.version>
+		<testng.version>6.11</testng.version>
 
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
